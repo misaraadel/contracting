@@ -1320,7 +1320,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .navbar.scrolled {
@@ -1463,15 +1463,7 @@ ul {
   color: #DE293B;
 }
 
-.navbar .bottom-nav {
-  width: 100%;
-  padding: 10px 0px;
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
-  background-color: #DE293B;
-}
-
-.navbar .bottom-nav .navbar-nav {
+.navbar .top-nav .content .navbar-nav {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1481,17 +1473,17 @@ ul {
           justify-content: center;
 }
 
-.navbar .bottom-nav .navbar-nav li {
+.navbar .top-nav .content .navbar-nav li {
   -webkit-margin-end: 25px;
           margin-inline-end: 25px;
 }
 
-.navbar .bottom-nav .navbar-nav li:last-child {
+.navbar .top-nav .content .navbar-nav li:last-child {
   -webkit-margin-end: 0px !important;
           margin-inline-end: 0px !important;
 }
 
-.navbar .bottom-nav .navbar-nav li a {
+.navbar .top-nav .content .navbar-nav li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1505,12 +1497,12 @@ ul {
   z-index: 9;
 }
 
-.navbar .bottom-nav .navbar-nav li a::after, .navbar .bottom-nav .navbar-nav li a::before {
+.navbar .top-nav .content .navbar-nav li a::after, .navbar .top-nav .content .navbar-nav li a::before {
   content: '';
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: #fff;
+  background-color: #000;
   bottom: 0;
   z-index: -1;
   -webkit-transform: scale(0);
@@ -1519,32 +1511,30 @@ ul {
   transition: all .2s linear;
 }
 
-.navbar .bottom-nav .navbar-nav li a::after {
+.navbar .top-nav .content .navbar-nav li a::after {
   left: calc(50% - 6px);
 }
 
-.navbar .bottom-nav .navbar-nav li a::before {
+.navbar .top-nav .content .navbar-nav li a::before {
   right: calc(50% - 6px);
 }
 
-.navbar .bottom-nav .navbar-nav li a img {
+.navbar .top-nav .content .navbar-nav li a img {
   width: 20px;
   height: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   -webkit-margin-end: 10px;
           margin-inline-end: 10px;
-  -webkit-filter: invert(99%) sepia(0%) saturate(2539%) hue-rotate(186deg) brightness(114%) contrast(100%);
-          filter: invert(99%) sepia(0%) saturate(2539%) hue-rotate(186deg) brightness(114%) contrast(100%);
 }
 
-.navbar .bottom-nav .navbar-nav li a span {
-  color: #fff;
+.navbar .top-nav .content .navbar-nav li a span {
+  color: #000;
   font-size: 15px;
   font-weight: 500;
 }
 
-.navbar .bottom-nav .navbar-nav li a.active::after, .navbar .bottom-nav .navbar-nav li a.active::before, .navbar .bottom-nav .navbar-nav li a:hover::after, .navbar .bottom-nav .navbar-nav li a:hover::before {
+.navbar .top-nav .content .navbar-nav li a.active::after, .navbar .top-nav .content .navbar-nav li a.active::before, .navbar .top-nav .content .navbar-nav li a:hover::after, .navbar .top-nav .content .navbar-nav li a:hover::before {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -2236,6 +2226,56 @@ footer .content .socail li a img:hover {
   opacity: 1.0;
 }
 
+.fixed-socail {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
+  bottom: 10px !important;
+  left: 10px !important;
+  z-index: 9999 !important;
+}
+
+.fixed-socail li {
+  margin-bottom: 10px;
+}
+
+.fixed-socail li a {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #DE293B;
+  border-radius: 50%;
+}
+
+.fixed-socail li a img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(52deg) brightness(102%) contrast(104%);
+          filter: invert(97%) sepia(100%) saturate(0%) hue-rotate(52deg) brightness(102%) contrast(104%);
+}
+
+.fixed-socail li a:hover {
+  -webkit-animation: tada .3s linear;
+          animation: tada .3s linear;
+}
+
+.fixed-socail li:last-child {
+  margin-bottom: 0px !important;
+}
+
 @media (max-width: 999px) {
   .navbar .top-nav .hamburger {
     display: block !important;
@@ -2243,48 +2283,47 @@ footer .content .socail li a img:hover {
   .navbar .top-nav .contact li a span {
     display: none !important;
   }
-  .navbar.scrolled .bottom-nav {
+  .navbar.scrolled .navbar-nav {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
     top: 60px !important;
     height: calc(100vh - 60px);
   }
-  .navbar .bottom-nav {
+  .navbar .navbar-nav {
     position: absolute;
     top: 100px;
     width: 100%;
     height: calc(100vh - 100px);
     right: -100%;
+    padding: 40px 20px !important;
+    background-color: #fff;
     z-index: 99;
     -webkit-transition: all .4s linear;
     transition: all .4s linear;
-  }
-  .navbar .bottom-nav.acitve-nav {
-    right: 0px !important;
-  }
-  .navbar .bottom-nav .navbar-nav {
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -ms-flex-line-pack: start;
-        align-content: flex-start;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    -ms-flex-line-pack: start !important;
+        align-content: flex-start !important;
     text-align: center;
-    padding: 40px 0px;
   }
-  .navbar .bottom-nav .navbar-nav li {
+  .navbar .navbar-nav.acitve-nav {
+    right: 0px !important;
+  }
+  .navbar .navbar-nav li {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
-  .navbar .bottom-nav .navbar-nav li a {
+  .navbar .navbar-nav li a {
     width: -webkit-fit-content !important;
     width: -moz-fit-content !important;
     width: fit-content !important;

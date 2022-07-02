@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     $('.hamburger').click(function(){
         $('.hamburger').toggleClass('active');
-        $('.bottom-nav').toggleClass('acitve-nav');
+        $('.navbar-nav').toggleClass('acitve-nav');
         $('body').toggleClass('overflowNone')
     });
 
@@ -85,7 +85,7 @@ $(document).ready(function () {
 
     $('.owl-clients').owlCarousel({
         rtl: true,
-        loop:false,
+        loop:true,
         margin: 0,
         nav:false,
         dots: true,
