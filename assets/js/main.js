@@ -82,6 +82,11 @@ $(document).ready(function () {
             }
         }
     });
+    //fancybox
+    $("[data-fancybox]").fancybox({
+        selector: '[data-fancybox="images"]',
+        loop: true
+    });
 
     $('.owl-clients').owlCarousel({
         rtl: true,

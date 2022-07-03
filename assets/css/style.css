@@ -1320,7 +1320,7 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 999;
 }
 
 .navbar.scrolled {
@@ -2376,7 +2376,7 @@ footer .content .socail li a img:hover {
   position: fixed;
   bottom: 10px !important;
   left: 10px !important;
-  z-index: 9999 !important;
+  z-index: 997 !important;
 }
 
 .fixed-socail li {
